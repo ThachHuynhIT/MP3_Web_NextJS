@@ -1,5 +1,6 @@
 import React from "react";
 import IconSidebar from "./IconSidebar";
+import Image from "next/image";
 import {
   AiOutlineHome,
   AiOutlineSearch,
@@ -11,7 +12,14 @@ import { BiLibrary } from "react-icons/bi";
 
 const Sidebar = () => {
   return (
-    <div className="text-gray-500 px-5 pt-8 pb-36 text-xs lg:text-xl border-r border-x-green-300 h-screen scrollbar-hidden sm:max-w-(12rem) lg:max-w-(15rem) hidden md:block">
+    <div className="text-gray-500 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm  h-screen scrollbar-hidden sm:max-w-[15rem] lg:max-w-[27rem] hidden md:block">
+      <Image
+        src="/image/HTlogo.png"
+        alt="me"
+        width="200"
+        height="100"
+        className="bg-slate-400 rounded-xl mb-4"
+      />
       <IconSidebar icon={AiOutlineHome} label="Home" />
       <IconSidebar icon={AiOutlineSearch} label="Search" />
       <IconSidebar icon={BiLibrary} label="Library" />

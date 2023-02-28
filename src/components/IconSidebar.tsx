@@ -10,9 +10,9 @@ const IconSidebar = ({ icon: Icon, label }: props) => {
   return (
     <div>
       <div className="space-y-4">
-        <button className="flex item-center space-x-2 hover:text-white">
-          <Icon className="h-4 w-4" />
-          <span>{label}</span>
+        <button className="flex items-center space-x-2 hover:text-white py-2">
+          <Icon className="h-5 w-5" />
+          <span className="font-black">{label}</span>
         </button>
       </div>
     </div>
