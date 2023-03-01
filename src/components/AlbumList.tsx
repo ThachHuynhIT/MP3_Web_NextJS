@@ -10,7 +10,7 @@ interface props {
 
 const AlbumList = ({ name, description, imgSrc }: props) => {
   return (
-    <div className="text-white my-6 w-full h-80 pr-4">
+    <div className="text-white my-6 md:w-full h-80 pr-4 pb-6">
       <div className="max-w-sm w-full h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <Image

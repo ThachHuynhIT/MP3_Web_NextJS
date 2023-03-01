@@ -6,7 +6,7 @@ import SearchInput from "./SearchInput";
 // rafce
 const Header = () => {
   return (
-    <div className="bg-white flex w-full h-12 pr-10 items-center  text-black ">
+    <div className="bg-white sticky top-0 flex w-full h-12 pr-10 items-center text-black ">
       <div className="flex items-center w-full m-2">
         <div className="hidden lg:flex m-4 text-xl font-medium">
           <button>
@@ -22,7 +22,7 @@ const Header = () => {
           </button>
         </div>
         <SearchInput />
-        <div className="text-right w-full">User</div>
+        <div className="text-right w-full px-4">User</div>
       </div>
     </div>
   );
