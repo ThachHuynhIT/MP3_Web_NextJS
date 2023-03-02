@@ -12,7 +12,7 @@ const HomePage = () => {
     {
       name: "Thach",
       description: "Thach",
-      img: "/image/HTlogo.png",
+      img: "/image/2.jpg",
     },
     {
       name: "Thach",

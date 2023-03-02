@@ -12,7 +12,7 @@ import { BiLibrary } from "react-icons/bi";
 
 const Sidebar = () => {
   return (
-    <div className="text-gray-500 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm  h-screen scrollbar-hidden sm:max-w-[15rem] lg:max-w-[27rem] hidden md:block">
+    <div className="text-gray-500 sticky top-0 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm h-max scrollbar-hidden sm:max-w-[15rem] lg:max-w-[27rem] hidden md:block">
       <Image
         src="/image/HTlogo.png"
         alt="me"
