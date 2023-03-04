@@ -11,7 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="text-sm font-mono scrollbar-hiddenw-full">
+      <main className="text-sm scrollbar-hidden w-full">
         <MainLayout>
           <HomePage></HomePage>
           <HomePage></HomePage>

@@ -6,14 +6,14 @@ import SearchInput from "./SearchInput";
 // rafce
 const Header = () => {
   return (
-    <div className="header bg-zinc-900	sticky top-0 flex w-full h-12 md:pr-10 items-center text-white z-20">
+    <div className="header bg-zinc-800	sticky top-0 flex w-full h-12 md:pr-10 items-center text-white z-20">
       <div className="flex items-center w-full m-2">
-        <div className="hidden lg:flex m-4 text-xl font-medium">
+        <div className="hidden lg:flex m-4 text-xl font-medium 	">
           <button>
-            <BiLeftArrow className="mr-4" />
+            <BiLeftArrow className="mr-4 active:translate-x-[-3px]" />
           </button>
           <button>
-            <BiRightArrow />
+            <BiRightArrow className="active:translate-x-[3px]" />
           </button>
         </div>
         <div className="lg:hidden sm:block pt-2">

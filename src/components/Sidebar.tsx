@@ -14,11 +14,12 @@ const Sidebar = () => {
   return (
     <div className="sidebar text-gray-500 sticky top-0 bottom-0 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm h-max scrollbar-hidden sm:max-w-[15rem] lg:max-w-[27rem] hidden md:block">
       <Image
-        src="/image/HTlogo.png"
+        priority
+        src="/image/logo.png"
         alt="me"
         width="200"
         height="100"
-        className="bg-slate-400 rounded-xl mb-4"
+        className=" rounded-xl mb-4  "
       />
       <IconSidebar icon={AiOutlineHome} link="/" label="Home" />
       <IconSidebar icon={AiOutlineSearch} link="/search" label="Search" />

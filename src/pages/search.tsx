@@ -4,7 +4,7 @@ import SearchCard from "@/components/SearchCard";
 
 const Search = () => {
   return (
-    <main className="flex relative bg-zinc-800 w-full h-screen overflow-y-scroll">
+    <main className="flex relative text-sm bg-zinc-800 w-full h-screen">
       <MainLayout>
         <SearchCard></SearchCard>
       </MainLayout>

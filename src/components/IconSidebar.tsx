@@ -1,6 +1,7 @@
 import { link } from "fs";
 import React from "react";
 import { IconType } from "react-icons";
+import { useRouter } from "next/router";
 
 interface props {
   icon: IconType;
@@ -9,10 +10,18 @@ interface props {
 }
 
 const IconSidebar = ({ icon: Icon, label, link }: props) => {
+  const router = useRouter();
+
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    router.push(link);
+  };
+
   return (
     <div>
       <div className="space-y-4">
         <a
+          onClick={handleClick}
           href={link}
           className="flex items-center space-x-2 hover:text-white py-2"
         >

@@ -5,7 +5,7 @@ import PlayingBar from "@/components/PlayingBar";
 
 export default function MainLayout({ children }: any) {
   return (
-    <div className="flex flex-wrap relative w-full ">
+    <div className="flex flex-wrap relative w-full">
       <div className="flex w-full h-full bg-zinc-900">
         <div className="lg:w-64 sm:w-0 bg-black sm:hidden lg:block">
           <Sidebar />
