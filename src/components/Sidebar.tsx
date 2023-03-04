@@ -12,7 +12,7 @@ import { BiLibrary } from "react-icons/bi";
 
 const Sidebar = () => {
   return (
-    <div className="text-gray-500 sticky top-0 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm h-max scrollbar-hidden sm:max-w-[15rem] lg:max-w-[27rem] hidden md:block">
+    <div className="sidebar text-gray-500 sticky top-0 bottom-0 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm h-max scrollbar-hidden sm:max-w-[15rem] lg:max-w-[27rem] hidden md:block">
       <Image
         src="/image/HTlogo.png"
         alt="me"
@@ -20,14 +20,14 @@ const Sidebar = () => {
         height="100"
         className="bg-slate-400 rounded-xl mb-4"
       />
-      <IconSidebar icon={AiOutlineHome} label="Home" />
-      <IconSidebar icon={AiOutlineSearch} label="Search" />
-      <IconSidebar icon={BiLibrary} label="Library" />
+      <IconSidebar icon={AiOutlineHome} link="/" label="Home" />
+      <IconSidebar icon={AiOutlineSearch} link="/search" label="Search" />
+      <IconSidebar icon={BiLibrary} link="/" label="Library" />
       <hr className="border-t-[0.1px] border-gray-900" />
-      <IconSidebar icon={AiOutlinePlus} label="Create Playlist" />
-      <IconSidebar icon={AiOutlineHeart} label="Liked Songs" />
+      <IconSidebar icon={AiOutlinePlus} link="/" label="Create Playlist" />
+      <IconSidebar icon={AiOutlineHeart} link="/" label="Liked Songs" />
       <hr className="border-t-[0.1px] border-gray-900 " />
-      <IconSidebar icon={AiOutlineDelete} label="Delete" />
+      <IconSidebar icon={AiOutlineDelete} link="/" label="Delete" />
     </div>
   );
 };
