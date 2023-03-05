@@ -11,7 +11,8 @@ interface props {
 
 const IconSidebar = ({ icon: Icon, label, link }: props) => {
   const router = useRouter();
-
+  // : React.ChangeEvent<HTMLInputElement>
+  // : React.FormEvent<HTMLInputElement>
   const handleClick = (e: any) => {
     e.preventDefault();
     router.push(link);
