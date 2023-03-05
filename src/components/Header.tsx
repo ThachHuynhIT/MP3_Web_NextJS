@@ -1,18 +1,20 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { CgMenuHotdog } from "react-icons/cg";
 import { BiRightArrow, BiLeftArrow } from "react-icons/bi";
 import SearchInput from "./SearchInput";
 
 // rafce
 const Header = () => {
+  const router = useRouter();
   return (
     <div className="header bg-zinc-800	sticky top-0 flex w-full h-12 md:pr-10 items-center text-white z-20">
       <div className="flex items-center w-full m-2">
         <div className="hidden lg:flex m-4 text-xl font-medium 	">
-          <button>
+          <button onClick={() => router.back()}>
             <BiLeftArrow className="mr-4 active:translate-x-[-3px]" />
           </button>
-          <button>
+          <button onClick={() => router.forward()}>
             <BiRightArrow className="active:translate-x-[3px]" />
           </button>
         </div>

@@ -18,6 +18,39 @@ const PlayingBar = () => {
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [duration, setDuration] = useState<number>(0);
   const [isPlay, setPlay] = useState<boolean>(false);
+  const [random, setRandom] = useState<boolean>(false);
+
+  function formatTime(sec_num: any) {
+    let hours: any = Math.floor(sec_num / 3600);
+    let minutes: any = Math.floor((sec_num - hours * 3600) / 60);
+    let seconds: any = Math.floor(sec_num - hours * 3600 - minutes * 60);
+
+    hours = hours < 10 ? (hours > "0" ? 0 + hours : 0) : hours;
+
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    return (hours !== 0 ? hours + ":" : "") + minutes + ":" + seconds;
+  }
+
+  const showTime = () => {
+    if (duration !== undefined) {
+      return formatTime(duration);
+    } else {
+      return <div>00:00</div>;
+    }
+  };
+
+  const showCurrentTime = () => {
+    if (currentTime !== undefined) {
+      return formatTime(currentTime);
+    } else {
+      return <div>00:00</div>;
+    }
+  };
 
   const handleLoadedData = () => {
     setDuration(audioRef.current.duration);
@@ -33,9 +66,12 @@ const PlayingBar = () => {
     setPlay(!isPlay);
   };
 
-  const handleTimeSliderChange = ({ x }: any) => {
-    audioRef.current.currentTime = x;
-    setCurrentTime(x);
+  const handleTimeSliderChange = ({ e }: any) => {
+    const input = document.getElementById(
+      "play-position"
+    ) as HTMLInputElement | null;
+    audioRef.current.currentTime = Number(input?.value);
+    setCurrentTime(Number(input?.value));
 
     if (!isPlay) {
       setPlay(true);
@@ -43,21 +79,40 @@ const PlayingBar = () => {
     }
   };
 
+  const nextSong = () => {
+    setAudioIndex((audioIndex + 1) % audios.length);
+  };
+
+  const audioControl = (e: any) => {
+    audioRef.current.volume = e.target.value / 100;
+  };
+
   return (
     <div className="flex fixed text-[32px] text-white items-center justify-between bg-neutral-800 border-t-2 border-zinc-600	border-solid w-full bottom-0 h-20 p-2">
-      <div className="text-base">PlayingBar</div>
+      <div className="text-base w-[400px]">{audios[audioIndex].name}</div>
       <div className="flex flex-col w-full md:w-[600px] items-center">
         <div className="flex mb-1">
           <div className="mx-4 active:scale-90">
             <MdOutlineShuffle />
           </div>
-          <div className="mx-4 active:scale-90">
-            <MdSkipPrevious />
-          </div>
+
+          {audioIndex > 0 ? (
+            <div
+              className="mx-4 active:scale-90"
+              onClick={() => {
+                setAudioIndex((audioIndex - 1) % audios.length);
+              }}
+            >
+              <MdSkipPrevious />
+            </div>
+          ) : (
+            <MdSkipPrevious className="mx-4 cursor-not-allowed brightness-50" />
+          )}
+
           <div className="mx-4 active:scale-90" onClick={handlePausePlayClick}>
             {isPlay ? <MdPause /> : <MdPlayCircleOutline />}
           </div>
-          <div className="mx-4 active:scale-90">
+          <div className="mx-4 active:scale-90" onClick={nextSong}>
             <MdSkipNext />
           </div>
           <div className="mx-4 active:scale-90">
@@ -66,20 +121,37 @@ const PlayingBar = () => {
         </div>
         <div className="flex w-full text-sm">
           <audio
+            controls
+            hidden
             ref={audioRef}
-            src="https://cdn.discordapp.com/attachments/775740994595323954/775741533789224960/Alan_Walker_-_Sing_Me_To_SleepMP3_160K.mp3"
-          ></audio>
-          <div className="mb-1">0:00 {currentTime}</div>
+            src={audios[audioIndex].url}
+            onLoadedData={handleLoadedData}
+            onTimeUpdate={() => setCurrentTime(audioRef.current.currentTime)}
+            onEnded={nextSong}
+            // preload="auto"
+          />
+          <div className="mb-1">{showCurrentTime()}</div>
           <input
+            value={currentTime}
+            max={duration}
+            onChange={(e) => handleTimeSliderChange(e)}
             type="range"
             name="playback-bar"
             id="play-position"
             className="w-full mb-1 cursor-pointer mx-2"
           />
-          <div>0:00</div>
+          <div>{showTime()}</div>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex w-[400px] justify-end">
+        <input
+          type="range"
+          name="audioControl"
+          id="audio-control"
+          min={0}
+          max={100}
+          onChange={audioControl}
+        />
         <MdVolumeUp className="mx-4" />
         <MdVolumeDown className="mx-4" />
         <MdVolumeOff className="mx-4" />
