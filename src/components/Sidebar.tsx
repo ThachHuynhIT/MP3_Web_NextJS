@@ -12,7 +12,7 @@ import { BiLibrary } from "react-icons/bi";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar text-gray-500 sticky top-0 bottom-0 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm h-max scrollbar-hidden sm:max-w-[15rem] lg:max-w-[27rem] hidden md:block">
+    <div className="truncate  sidebar text-gray-500 sticky top-0 bottom-0 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm h-max  sm:max-w-[12rem] lg:max-w-[20rem] hidden md:block">
       <Image
         priority
         src="/image/logo.png"
@@ -28,7 +28,10 @@ const Sidebar = () => {
       <IconSidebar icon={AiOutlinePlus} link="/" label="Create Playlist" />
       <IconSidebar icon={AiOutlineHeart} link="/" label="Liked Songs" />
       <hr className="border-t-[0.1px] border-gray-900 " />
-      <IconSidebar icon={AiOutlineDelete} link="/" label="Thach playlist" />
+      <IconSidebar icon={AiOutlineDelete} link="/" label="Test page router" />
+      <IconSidebar icon={AiOutlineDelete} link="/NotFound" label="Not Found" />
+      <IconSidebar icon={AiOutlineDelete} link="/login" label="Login" />
+      <IconSidebar icon={AiOutlineDelete} link="/album" label="Album" />
     </div>
   );
 };
