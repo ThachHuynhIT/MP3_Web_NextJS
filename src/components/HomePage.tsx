@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AlbumListHeader from "@/components/AlbumListHeader";
 import AlbumList from "@/components/AlbumList";
+
+import * as albumService from "../services/albumService";
 
 const HomePage = () => {
   let testData = [
@@ -50,6 +52,15 @@ const HomePage = () => {
       img: "/image/HTlogo.png",
     },
   ];
+
+  // useEffect(() => {
+  //   const fetchApi = async () => {
+  //     const response = await albumService.getAllAlbum(1);
+  //     console.log(response);
+  //   };
+  //   fetchApi();
+  // }, []);
+
   return (
     <div className="h-max p-8 w-full">
       <AlbumListHeader typeOfList="Album phu hop voi ban"></AlbumListHeader>

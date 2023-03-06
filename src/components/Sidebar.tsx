@@ -28,7 +28,7 @@ const Sidebar = () => {
       <IconSidebar icon={AiOutlinePlus} link="/" label="Create Playlist" />
       <IconSidebar icon={AiOutlineHeart} link="/" label="Liked Songs" />
       <hr className="border-t-[0.1px] border-gray-900 " />
-      <IconSidebar icon={AiOutlineDelete} link="/" label="Delete" />
+      <IconSidebar icon={AiOutlineDelete} link="/" label="Thach playlist" />
     </div>
   );
 };

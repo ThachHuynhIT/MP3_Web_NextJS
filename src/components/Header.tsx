@@ -14,7 +14,7 @@ const Header = () => {
           <button onClick={() => router.back()}>
             <BiLeftArrow className="mr-4 active:translate-x-[-3px]" />
           </button>
-          <button onClick={() => router.forward()}>
+          <button onClick={() => router.forward}>
             <BiRightArrow className="active:translate-x-[3px]" />
           </button>
         </div>

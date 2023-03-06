@@ -85,6 +85,24 @@ const PlayingBar = () => {
 
   const audioControl = (e: any) => {
     audioRef.current.volume = e.target.value / 100;
+
+    const vl1 = document.getElementById("vl1");
+    const vl2 = document.getElementById("vl2");
+    const vl3 = document.getElementById("vl3");
+
+    if (e.target.value == 0) {
+      vl3?.classList.remove("hidden");
+      vl2?.classList.add("hidden");
+      vl1?.classList.add("hidden");
+    } else if (e.target.value > 60) {
+      vl1?.classList.remove("hidden");
+      vl2?.classList.add("hidden");
+      vl3?.classList.add("hidden");
+    } else {
+      vl2?.classList.remove("hidden");
+      vl3?.classList.add("hidden");
+      vl1?.classList.add("hidden");
+    }
   };
 
   return (
@@ -152,9 +170,9 @@ const PlayingBar = () => {
           max={100}
           onChange={audioControl}
         />
-        <MdVolumeUp className="mx-4" />
-        <MdVolumeDown className="mx-4" />
-        <MdVolumeOff className="mx-4" />
+        <MdVolumeUp className="mx-4 w-1/12" id="vl1" />
+        <MdVolumeDown className="mx-4 hidden" id="vl2" />
+        <MdVolumeOff className="mx-4 hidden" id="vl3" />
       </div>
     </div>
   );
