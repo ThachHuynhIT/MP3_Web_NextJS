@@ -9,7 +9,6 @@ function AlbumSongsList() {
 
   return (
     <div>
-      {" "}
       <h1>Page: {router.query.slug}</h1>
       <p>Count: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increase count</button>
