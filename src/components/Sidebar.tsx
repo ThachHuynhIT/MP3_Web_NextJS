@@ -12,7 +12,7 @@ import { BiLibrary } from "react-icons/bi";
 
 const Sidebar = () => {
   return (
-    <div className="truncate  sidebar text-gray-500 sticky top-0 bottom-0 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm h-max  sm:max-w-[12rem] lg:max-w-[20rem] hidden md:block">
+    <div className="truncate sidebar text-gray-500 sticky top-0 bottom-0 m-0 px-5 pt-5 pb-36 text-xs lg:text-sm h-max  sm:max-w-[12rem] lg:max-w-[20rem] hidden md:block">
       <Image
         priority
         src="/image/logo.png"
