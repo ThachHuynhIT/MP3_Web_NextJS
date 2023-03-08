@@ -1,6 +1,6 @@
 import React from "react";
 import { SongsList } from "@/components/SongsList";
-import MainLayout from "@/layouts/MainLayout";
+import MainLayout from "../layouts/MainLayout";
 
 const index = () => {
   return (
