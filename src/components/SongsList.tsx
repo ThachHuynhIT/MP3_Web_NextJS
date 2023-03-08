@@ -32,7 +32,7 @@ export const SongsList = () => {
           </tr>
         </thead>
         <tbody>
-          {/* {songs.map((songs, index) => {
+          {songs.map((songs, index) => {
             return (
               <>
                 <tr key={index} className="border-b dark:border-gray-700">
@@ -50,7 +50,7 @@ export const SongsList = () => {
                 </tr>
               </>
             );
-          })} */}
+          })}
         </tbody>
       </table>
     </div>
