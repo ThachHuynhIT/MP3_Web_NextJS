@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import songs from "../../data/songs";
 import SongPopUp from "./SongPopUp";
 import Image from "next/image";
 
 export const SongsList = () => {
-  // console.log(songs);
   return (
     <div className="relative overflow-x-auto shadow-md scrollbar-hidden sm:rounded-lg mx-4 bg-gradient-to-tr from-violet-500 to-black bggrad ">
       <div className="m-4 ">
@@ -33,7 +32,7 @@ export const SongsList = () => {
           </tr>
         </thead>
         <tbody>
-          {songs.map((songs, index) => {
+          {/* {songs.map((songs, index) => {
             return (
               <>
                 <tr key={index} className="border-b dark:border-gray-700">
@@ -51,7 +50,7 @@ export const SongsList = () => {
                 </tr>
               </>
             );
-          })}
+          })} */}
         </tbody>
       </table>
     </div>
