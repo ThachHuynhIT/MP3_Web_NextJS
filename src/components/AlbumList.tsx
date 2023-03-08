@@ -1,5 +1,4 @@
 import React from "react";
-import AlbumListHeader from "@/components/AlbumListHeader";
 import Image from "next/image";
 
 interface props {
@@ -13,7 +12,7 @@ const AlbumList = ({ name, description, imgSrc }: props) => {
     <div className="text-white my-6 md:w-full h-80 pr-4 pb-6 scale-x-50 sm:scale-x-50 md:scale-100">
       <div className="max-w-sm w-full h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700 hover:bg-zinc-700 duration-200	">
         <a href="#" className="">
-          <div className="flex w-full justify-center mt-2">
+          <div className="flex w-full justify-center mt-2 object-cover">
             <Image
               className="rounded-t-lg h-44 "
               src={imgSrc}

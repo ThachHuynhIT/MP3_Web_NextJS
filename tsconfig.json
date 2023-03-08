@@ -23,7 +23,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/services/albumService.tsx"
+    "src/services/albumService.tsx",
+    "data/songs.tsx"
   ],
   "exclude": ["node_modules"]
 }

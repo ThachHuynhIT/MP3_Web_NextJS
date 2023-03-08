@@ -44,19 +44,34 @@ const SearchCard = () => {
           {musicGenre.map((genre, index) => {
             return (
               <>
-                <div className="relative  bg-white rounded-t-lg w-5/6 h-40 my-4 ">
+                <div
+                  key={index}
+                  className="relative  bg-white rounded-t-lg w-5/6 h-40 my-4 "
+                >
                   <div className="absolute bottom-5 right-6 text-2xl font-bold">
                     {genre.type}
                   </div>
-                  <img
+                  <Image
                     className="rounded-t-lg h-40"
                     src={genre.img}
                     alt=""
-                    // width={200}
-                    // height={200}
+                    width={200}
+                    height={200}
                   />
                 </div>
-                <div className="bg-white w-5/6 h-40 rotate-2"></div>
+                {/* <div className="bg-white w-5/6 h-40 rotate-2"></div>   */}
+                <div className="relative bg-white rotate-2 rounded-t-lg w-5/6 h-40 my-4 ">
+                  <div className="absolute bottom-5 right-6 text-2xl font-bold">
+                    {genre.type}
+                  </div>
+                  <Image
+                    className="rounded-t-lg h-40"
+                    src={genre.img}
+                    alt=""
+                    width={200}
+                    height={200}
+                  />
+                </div>
               </>
             );
           })}

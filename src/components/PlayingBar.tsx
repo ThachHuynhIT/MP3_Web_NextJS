@@ -11,6 +11,7 @@ import {
   MdVolumeOff,
   MdPause,
 } from "react-icons/md";
+import Image from "next/image";
 
 const PlayingBar = () => {
   const audioRef = useRef<any>();
@@ -107,13 +108,22 @@ const PlayingBar = () => {
 
   return (
     <div className="flex fixed text-[32px] text-white items-center justify-between bg-neutral-800 border-t-2 border-zinc-600	border-solid w-full bottom-0 h-20 p-2">
-      <div className="text-base w-[400px]">{audios[audioIndex].name}</div>
+      <div className="text-lg w-[400px] flex items-center">
+        <Image
+          priority
+          className="rounded-t-lg ml-1 mr-3 w-[50px] h-[50px] object-cover"
+          src={audios[audioIndex].links.images[1].url}
+          alt=""
+          width={50}
+          height={50}
+        ></Image>
+        {audios[audioIndex].name}
+      </div>
       <div className="flex flex-col w-full md:w-[600px] items-center">
         <div className="flex mb-1">
           <div className="mx-4 active:scale-90">
             <MdOutlineShuffle />
           </div>
-
           {audioIndex > 0 ? (
             <div
               className="mx-4 active:scale-90"
