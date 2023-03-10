@@ -4,7 +4,7 @@ import Image from "next/image";
 // fake data
 import songs from "../../data/songs";
 import album from "data/album";
-
+// cmt
 export const SongsList = () => {
   return (
     <div className="relative overflow-x-auto shadow-md scrollbar-hidden sm:rounded-lg md:mx-4 bg-gradient-to-tr from-violet-700 to-black bggrad ">
