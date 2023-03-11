@@ -38,15 +38,15 @@ const SearchCard = () => {
   ];
   return (
     <div className="search-card flex">
-      <div className="flex flex-col text-white pl-3 pt-10 w-full mx-8">
+      <div className="flex flex-col text-white pl-3 pt-10 mx-8">
         <div className="font-bold text-2xl">Browse all</div>
-        <div className="grid justify-items-stretch grid-cols-2 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-8  mt-10">
+        <div className="grid justify-items-stretch grid-cols-2 md:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-7 mt-10">
           {musicGenre.map((genre, index) => {
             return (
-              <>
+              <div key={index}>
                 <div
                   key={index}
-                  className="relative  bg-white rounded-t-lg w-5/6 h-40 my-4 "
+                  className="relative rounded-t-lg w-5/6 h-40 my-4 "
                 >
                   <div className="absolute bottom-5 right-6 text-2xl font-bold">
                     {genre.type}
@@ -60,7 +60,7 @@ const SearchCard = () => {
                   />
                 </div>
                 {/* <div className="bg-white w-5/6 h-40 rotate-2"></div>   */}
-                <div className="relative bg-white rotate-2 rounded-t-lg w-5/6 h-40 my-4 ">
+                <div className="relative  rotate-2 rounded-t-lg w-5/6 h-40 my-4 ">
                   <div className="absolute bottom-5 right-6 text-2xl font-bold">
                     {genre.type}
                   </div>
@@ -72,7 +72,7 @@ const SearchCard = () => {
                     height={200}
                   />
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

@@ -1,24 +1,24 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
 interface props {
+  imgSrc: string;
   name: string;
   description: string;
-  imgSrc: string;
 }
 
-const AlbumList = ({ name, description, imgSrc }: props) => {
+const SingerList = ({ imgSrc, name, description }: props) => {
   return (
     <div className="text-white md:w-full h-80 pr-4  scale-x-50 sm:scale-x-50 md:scale-100">
       <div className="max-w-sm w-full h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700 hover:bg-zinc-700 duration-200	">
         <a href="#" className="">
           <div className="flex w-full justify-center my-4 object-cover">
             <Image
-              className="rounded-t-lg h-44 object-none"
+              className="rounded-full object-cover h-[176px] hover:bg-slate-600"
               src={imgSrc}
-              alt="halo"
-              width={200}
-              height={200}
+              alt=""
+              width={176}
+              height={176}
             />
           </div>
           <div className="p-5 h-32">
@@ -35,4 +35,4 @@ const AlbumList = ({ name, description, imgSrc }: props) => {
   );
 };
 
-export default AlbumList;
+export default SingerList;

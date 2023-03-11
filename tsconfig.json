@@ -24,7 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/services/albumService.tsx",
-    "data/songs.tsx"
+    "data/songs.tsx",
+    "src/pages/404.js"
   ],
   "exclude": ["node_modules"]
 }

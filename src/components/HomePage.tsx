@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import AlbumList from "@/components/AlbumList";
 
 import * as albumService from "../services/albumService";
+import SingerList from "./SingerList";
+import ItemTitle from "./ItemTitle";
 
 const HomePage = () => {
   let testData = [
@@ -62,23 +64,36 @@ const HomePage = () => {
 
   return (
     <div className="h-max p-8 pb-1 w-full">
-      <div className="flex content-between font-bold text-white text-2xl mb-12 w-full mt-3">
-        <div className="w-1/2">Album hay</div>
-        <button className="text-right w-1/2">Xem thêm</button>
-      </div>
+      <ItemTitle name={"Album"} url={""}></ItemTitle>
       <div className="grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
         {testData.map((dataE, index) => {
           if (index <= 5) {
             return (
-              <AlbumList
-                key={index}
-                name={dataE.name}
-                description={dataE.description}
-                imgSrc={dataE.img}
-              ></AlbumList>
+              <div key={index}>
+                <AlbumList
+                  name={dataE.name}
+                  description={dataE.description}
+                  imgSrc={dataE.img}
+                ></AlbumList>
+              </div>
             );
-          } else {
-            return <div key={index}></div>;
+          }
+        })}
+      </div>
+
+      <ItemTitle name={"Singer"} url={""}></ItemTitle>
+      <div className="singer grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
+        {testData.map((dataE, index) => {
+          if (index <= 5) {
+            return (
+              <div key={index}>
+                <SingerList
+                  imgSrc={dataE.img}
+                  name={dataE.name}
+                  description={dataE.description}
+                ></SingerList>
+              </div>
+            );
           }
         })}
       </div>

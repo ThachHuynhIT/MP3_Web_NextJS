@@ -5,18 +5,55 @@ import { useRouter } from "next/router";
 
 import songs from "../../data/songs";
 import SongPopUp from "./OptionSongPopUp";
+import ItemTitle from "./ItemTitle";
+import SingerList from "./SingerList";
 
 interface props {
   keyword: string;
 }
 
 const SearchResult = ({ keyword }: props) => {
+  let testData = [
+    {
+      name: "Thach",
+      description: "Thach",
+      img: "/image/2.jpg",
+    },
+    {
+      name: "Thach",
+      description: "Thach",
+      img: "/image/2.jpg",
+    },
+    {
+      name: "Thach",
+      description: "Thach",
+      img: "/image/2.jpg",
+    },
+    {
+      name: "Thach",
+      description: "Thach",
+      img: "/image/2.jpg",
+    },
+    {
+      name: "Thach",
+      description: "Thach",
+      img: "/image/2.jpg",
+    },
+    {
+      name: "Thach",
+      description: "Thach",
+      img: "/image/2.jpg",
+    },
+    {
+      name: "Thach",
+      description: "Thach",
+      img: "/image/2.jpg",
+    },
+  ];
   return (
-    <div className="flex flex-col md:m-8 h-max">
-      <div className="flex content-between font-bold text-white text-2xl mb-5 w-full mt-3">
-        <div className="w-1/2">Songs</div>
-        <button className="text-right w-1/2">See more</button>
-      </div>
+    <div className="flex flex-col md:m-8 ">
+      {/* song list was searched */}
+      <ItemTitle name={"Songs"} url={""}></ItemTitle>
       <div className="song h-max bg-stone-700 bg-opacity-20 rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
           <tbody className="w-full">
@@ -53,23 +90,41 @@ const SearchResult = ({ keyword }: props) => {
           </tbody>
         </table>
       </div>
-      <div className="flex content-between font-bold text-white text-2xl mb-5 w-full mt-3">
-        <div className="w-1/2">Artists</div>
-        <button className="text-right w-1/2">See more</button>
-      </div>
-      <div className="artists h-52 bg-stone-700 "></div>
-      <div className="flex content-between font-bold text-white text-2xl mb-5 w-full mt-3">
-        <div className="w-1/2">Albums</div>
-        <button className="text-right w-1/2">See more</button>
-      </div>
-      <div className="album bg-stone-700 grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
-        <AlbumList
-          name={""}
-          description={""}
-          imgSrc={
-            "https://res.cloudinary.com/dc2kbu5a4/image/upload/v1674986889/cld-sample-5.jpg"
+
+      {/* singer list was searched */}
+      <ItemTitle name={"Singer"} url={""}></ItemTitle>
+      <div className="singer grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
+        {testData.map((dataE, index) => {
+          if (index <= 5) {
+            return (
+              <div key={index}>
+                <SingerList
+                  imgSrc={dataE.img}
+                  name={dataE.name}
+                  description={dataE.description}
+                ></SingerList>
+              </div>
+            );
           }
-        />
+        })}
+      </div>
+
+      {/* album list was searched */}
+      <ItemTitle name={"Album"} url={""}></ItemTitle>
+      <div className="album grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
+        {testData.map((dataE, index) => {
+          if (index <= 5) {
+            return (
+              <div key={index}>
+                <AlbumList
+                  name={dataE.name}
+                  description={dataE.description}
+                  imgSrc={dataE.img}
+                ></AlbumList>
+              </div>
+            );
+          }
+        })}
       </div>
     </div>
   );

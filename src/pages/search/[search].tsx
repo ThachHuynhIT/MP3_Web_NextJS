@@ -8,11 +8,11 @@ const Search = () => {
   const { search } = router.query || "";
 
   return (
-    <main className="flex relative text-sm bg-zinc-800 w-full ">
+    <div>
       <MainLayout>
         <SearchResult keyword={search?.toString() || ""} />
       </MainLayout>
-    </main>
+    </div>
   );
 };
 
