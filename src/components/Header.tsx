@@ -26,7 +26,7 @@ const Header = () => {
         <div className="text-black items-center py-2">
           <SearchInput />
         </div>
-        <div className="text-right w-full px-4">User</div>
+        <div className="text-right w-full p-0 md:px-4">User</div>
       </div>
     </div>
   );

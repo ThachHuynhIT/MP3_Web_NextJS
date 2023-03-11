@@ -107,8 +107,10 @@ const PlayingBar = () => {
   };
 
   return (
-    <div className="flex fixed text-[32px] text-white items-center justify-between bg-neutral-800 border-t-2 border-zinc-600	border-solid w-full bottom-0 h-20 p-2">
-      <div className="text-lg w-[400px] flex items-center">
+    <div className="flex fixed text-[32px] text-white items-center md:justify-between bg-neutral-800 border-t-2 border-zinc-600	border-solid w-full bottom-0 h-20 p-2">
+      {/* song name and img */}
+
+      <div className="text-lg w-auto md:w-[400px] flex items-center">
         <Image
           priority
           className="rounded-t-lg ml-1 mr-3 w-[50px] h-[50px] object-cover"
@@ -117,8 +119,10 @@ const PlayingBar = () => {
           width={50}
           height={50}
         ></Image>
-        {audios[audioIndex].name}
+        <div className="hidden md:block">{audios[audioIndex].name}</div>
       </div>
+
+      {/* play, next bar */}
       <div className="flex flex-col w-full md:w-[600px] items-center">
         <div className="flex mb-1">
           <div className="mx-4 active:scale-90">
@@ -136,7 +140,6 @@ const PlayingBar = () => {
           ) : (
             <MdSkipPrevious className="mx-4 cursor-not-allowed brightness-50" />
           )}
-
           <div className="mx-4 active:scale-90" onClick={handlePausePlayClick}>
             {isPlay ? <MdPause /> : <MdPlayCircleOutline />}
           </div>
@@ -147,6 +150,8 @@ const PlayingBar = () => {
             <MdOutlineRepeat />
           </div>
         </div>
+
+        {/* audio */}
         <div className="flex w-full text-sm">
           <audio
             controls
@@ -166,12 +171,14 @@ const PlayingBar = () => {
             type="range"
             name="playback-bar"
             id="play-position"
-            className="w-full mb-1 cursor-pointer mx-2"
+            className="w-full mb-1 cursor-pointer mx-2 "
           />
           <div>{showTime()}</div>
         </div>
       </div>
-      <div className="flex w-[400px] justify-end">
+
+      {/* volume */}
+      <div className="w-[400px] justify-end hidden md:flex">
         <input
           type="range"
           name="audioControl"
