@@ -61,8 +61,8 @@ const HomePage = () => {
   // }, []);
 
   return (
-    <div className="h-max p-8 w-full">
-      <div className="flex content-between font-bold text-white text-2xl mb-5 w-full mt-3">
+    <div className="h-max p-8 pb-1 w-full">
+      <div className="flex content-between font-bold text-white text-2xl mb-12 w-full mt-3">
         <div className="w-1/2">Album hay</div>
         <button className="text-right w-1/2">Xem thêm</button>
       </div>

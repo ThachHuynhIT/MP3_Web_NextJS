@@ -5,7 +5,14 @@ import Image from "next/image";
 import songs from "../../data/songs";
 import album from "data/album";
 // cmt
-export const SongsList = () => {
+
+interface props {
+  page: number;
+}
+
+export const SongsList = ({ page }: props) => {
+  const albumLength = songs.length;
+
   return (
     <div className="relative overflow-x-auto shadow-md scrollbar-hidden sm:rounded-lg md:mx-4 bg-gradient-to-tr from-violet-700 to-black bggrad ">
       <div className="flex m-8 ml-10 dark:text-white h-max items-center">
@@ -46,33 +53,34 @@ export const SongsList = () => {
         </thead>
         <tbody>
           {songs.map((songs, index) => {
-            return (
-              <>
-                <tr
-                  key={index}
-                  className="border-b dark:border-gray-700 hover:bg-indigo-800 hover:text-white"
-                >
-                  <td className="px-6 py-4">{index + 1}</td>
-                  <th
-                    scope="row"
-                    className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+            if (index < page && index < albumLength)
+              return (
+                <>
+                  <tr
+                    key={index}
+                    className="border-b dark:border-gray-700 hover:bg-indigo-800 hover:text-white"
                   >
-                    <Image
-                      className="rounded-t-lg mr-2 w-[40px] h-[40px] object-cover"
-                      src={songs.links.images[1].url}
-                      alt=""
-                      width={50}
-                      height={50}
-                    ></Image>
-                    {songs.name}
-                  </th>
-                  <td className="px-6 py-4">{songs.author}</td>
-                  <td className="px-6 py-4 absolute ">
-                    <SongPopUp index={index} />
-                  </td>
-                </tr>
-              </>
-            );
+                    <td className="px-6 py-4">{index + 1}</td>
+                    <th
+                      scope="row"
+                      className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      <Image
+                        className="rounded-t-lg mr-2 w-[40px] h-[40px] object-cover"
+                        src={songs.links.images[1].url}
+                        alt=""
+                        width={50}
+                        height={50}
+                      ></Image>
+                      {songs.name}
+                    </th>
+                    <td className="px-6 py-4">{songs.author}</td>
+                    <td className="px-6 py-4 absolute ">
+                      <SongPopUp index={index} />
+                    </td>
+                  </tr>
+                </>
+              );
           })}
         </tbody>
       </table>
