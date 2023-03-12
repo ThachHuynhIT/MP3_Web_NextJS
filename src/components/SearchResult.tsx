@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AlbumList from "./AlbumList";
 import Image from "next/image";
 import { useRouter } from "next/router";
+
+import { useSelector } from "react-redux";
+import { selectSearch } from "slices/searchSlice";
 
 import songs from "../../data/songs";
 import SongPopUp from "./OptionSongPopUp";
 import ItemTitle from "./ItemTitle";
 import SingerList from "./SingerList";
 
-interface props {
-  keyword: string;
-}
+const SearchResult = () => {
+  const keyWord = useSelector(selectSearch);
 
-const SearchResult = ({ keyword }: props) => {
   let testData = [
     {
       name: "Thach",
@@ -53,6 +54,7 @@ const SearchResult = ({ keyword }: props) => {
   return (
     <div className="flex flex-col md:m-8 ">
       {/* song list was searched */}
+      {keyWord}
       <ItemTitle name={"Songs"} url={""}></ItemTitle>
       <div className="song h-max bg-stone-700 bg-opacity-20 rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 overflow-hidden">

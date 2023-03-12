@@ -14,18 +14,18 @@ const AlbumList = ({ name, description, imgSrc }: props) => {
         <a href="#" className="">
           <div className="flex w-full justify-center my-4 object-cover">
             <Image
-              className="rounded-t-lg  h-44 object-none"
+              className="rounded-t-lg h-[200px] object-cover"
               src={imgSrc}
               alt="halo"
-              width={200}
-              height={200}
+              width={220}
+              height={220}
             />
           </div>
-          <div className="p-5 h-32">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div className="p-5 pt-1 h-32">
+            <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white h-[30px] truncate">
               {name}
             </h5>
-            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 h-[20px] truncate">
               {description}
             </p>
           </div>

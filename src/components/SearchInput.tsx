@@ -1,13 +1,19 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { setKeySearch } from "slices/searchSlice";
+
 import { FaSearch } from "react-icons/fa";
 
 const SearchInput = () => {
   const [search, setSearch] = useState<string>("");
   const router = useRouter();
 
+  const dispatch = useDispatch();
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
+    dispatch(setKeySearch(e.target.value));
   };
 
   const onSubmit = (e: FormEvent) => {

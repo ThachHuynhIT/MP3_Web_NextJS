@@ -1,4 +1,4 @@
-import React, { useState, useRef, Ref } from "react";
+import React, { useState, useRef } from "react";
 import audios from "../../data/songs";
 import {
   MdPlayCircleOutline,
@@ -86,7 +86,6 @@ const PlayingBar = () => {
 
   const audioControl = (e: any) => {
     audioRef.current.volume = e.target.value / 100;
-
     const vl1 = document.getElementById("vl1");
     const vl2 = document.getElementById("vl2");
     const vl3 = document.getElementById("vl3");
