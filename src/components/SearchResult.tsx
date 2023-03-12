@@ -55,36 +55,37 @@ const SearchResult = ({ keyword }: props) => {
       {/* song list was searched */}
       <ItemTitle name={"Songs"} url={""}></ItemTitle>
       <div className="song h-max bg-stone-700 bg-opacity-20 rounded-lg">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 overflow-hidden">
           <tbody className="w-full">
             {songs.map((songs, index) => {
               if (index < 5)
                 return (
-                  <>
-                    <tr
-                      key={index}
-                      className="border-b dark:border-gray-700 hover:bg-indigo-800 hover:rounded-lg  hover:text-white"
+                  <tr
+                    key={index}
+                    className="border-b dark:border-gray-700 hover:bg-indigo-800 hover:rounded-lg  hover:text-white"
+                  >
+                    {/* <td className="px-6 py-4">{index + 1}</td> */}
+                    <th
+                      scope="row"
+                      className="flex  items-center text-ellipsis overflow-hidden md:px-6 w-[200px] md:w-full py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                     >
-                      <td className="px-6 py-4">{index + 1}</td>
-                      <th
-                        scope="row"
-                        className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                      >
-                        <Image
-                          className="rounded-t-lg mr-2 w-[40px] h-[40px] object-cover"
-                          src={songs.links.images[1].url}
-                          alt=""
-                          width={50}
-                          height={50}
-                        ></Image>
+                      <Image
+                        className="rounded-t-lg mr-2 w-[40px] h-[40px] object-cover"
+                        src={songs.links.images[1].url}
+                        alt=""
+                        width={50}
+                        height={50}
+                      ></Image>
+                      <div className="flex flex-col">
                         {songs.name}
-                      </th>
-                      <td className="px-6 py-4">{songs.author}</td>
-                      <td className="px-6 py-4">
-                        <SongPopUp index={index} />
-                      </td>
-                    </tr>
-                  </>
+                        <div className=" font-light">{songs.author}</div>
+                      </div>
+                    </th>
+                    <td className="md:px-6 py-4">{songs.author}</td>
+                    <td className="px-6 py-4">
+                      <SongPopUp index={index} />
+                    </td>
+                  </tr>
                 );
             })}
           </tbody>
@@ -93,7 +94,7 @@ const SearchResult = ({ keyword }: props) => {
 
       {/* singer list was searched */}
       <ItemTitle name={"Singer"} url={""}></ItemTitle>
-      <div className="singer grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
+      <div className="singer grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
         {testData.map((dataE, index) => {
           if (index <= 5) {
             return (
@@ -111,7 +112,7 @@ const SearchResult = ({ keyword }: props) => {
 
       {/* album list was searched */}
       <ItemTitle name={"Album"} url={""}></ItemTitle>
-      <div className="album grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
+      <div className="album grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
         {testData.map((dataE, index) => {
           if (index <= 5) {
             return (

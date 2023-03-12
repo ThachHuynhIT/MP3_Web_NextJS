@@ -65,7 +65,7 @@ const HomePage = () => {
   return (
     <div className="h-max p-8 pb-1 w-full">
       <ItemTitle name={"Album"} url={""}></ItemTitle>
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
         {testData.map((dataE, index) => {
           if (index <= 5) {
             return (
@@ -82,7 +82,7 @@ const HomePage = () => {
       </div>
 
       <ItemTitle name={"Singer"} url={""}></ItemTitle>
-      <div className="singer grid sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
+      <div className="singer grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
         {testData.map((dataE, index) => {
           if (index <= 5) {
             return (

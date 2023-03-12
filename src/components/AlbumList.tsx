@@ -9,12 +9,12 @@ interface props {
 
 const AlbumList = ({ name, description, imgSrc }: props) => {
   return (
-    <div className="text-white md:w-full h-80 px-4 sm:scale-x-70 md:scale-100">
+    <div className="text-white  md:w-full h-80 pr-4  sm:scale-x-70 md:scale-100">
       <div className="max-w-sm w-full h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700 hover:bg-zinc-700 duration-200	">
         <a href="#" className="">
           <div className="flex w-full justify-center my-4 object-cover">
             <Image
-              className="rounded-t-lg h-44 object-none"
+              className="rounded-t-lg  h-44 object-none"
               src={imgSrc}
               alt="halo"
               width={200}

@@ -15,6 +15,7 @@ export const SongsList = ({ page }: props) => {
 
   return (
     <div className="relative overflow-x-auto shadow-md scrollbar-hidden sm:rounded-lg md:mx-4 bg-gradient-to-tr from-violet-700 to-black bggrad ">
+      {/* album img */}
       <div className="flex m-8 ml-10 dark:text-white h-max items-center">
         <Image
           className="rounded-t-lg  w-[250px] h-[250px] object-cover"
@@ -36,6 +37,7 @@ export const SongsList = ({ page }: props) => {
           </div>
         </div>
       </div>
+      {/* song list */}
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
         <thead className="text-xs text-gray-800 uppercase dark:text-gray-400">
           <tr>
@@ -46,7 +48,7 @@ export const SongsList = ({ page }: props) => {
               Name
             </th>
             <th scope="col" className="px-6 py-3">
-              Author
+              Singer
             </th>
             <th scope="col" className="px-6 py-3"></th>
           </tr>
