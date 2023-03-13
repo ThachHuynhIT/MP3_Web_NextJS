@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         moon: "url('/svg/moon.svg')",
-        meteor: "url('/svg/Meteor.svg')",
+        meteor: "url('/image/bg.png')",
       },
       boxShadow: {
         neumorphism:
