@@ -9,7 +9,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        moon: "url('/svg/moon.svg')",
+        meteor: "url('/svg/Meteor.svg')",
+      },
+      boxShadow: {
+        neumorphism:
+          "inset 23px 23px 46px #424279,  inset -23px -23px 46px #505095",
+      },
+    },
   },
   plugins: [],
 };

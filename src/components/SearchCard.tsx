@@ -30,62 +30,6 @@ const SearchCard = () => {
       type: "Pop",
       img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
     },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
-    {
-      type: "Pop",
-      img: "https://media.istockphoto.com/id/1289702539/vi/vec-to/vector-ph%C3%A1t-s%C3%A1ng-%C3%A1p-ph%C3%ADch-pop-music-b%E1%BB%99-ch%E1%BB%AF-c%C3%A1i-v%C3%A0-s%E1%BB%91-neon-m%C3%A0u-xanh.jpg?s=170667a&w=0&k=20&c=kYeNaNf7bE8yqe8T08tPPTdzW_losFoAT9zoyDXPVRU=",
-    },
   ];
   return (
     <div className="search-card flex">
@@ -97,14 +41,14 @@ const SearchCard = () => {
               <div key={index}>
                 <div
                   key={index}
-                  className="relative rounded-t-lg w-5/6 h-48 my-4 active:scale-95"
+                  className="relative rounded-t-lg w-5/6 h-48 my-4 active:scale-95 shadow-neumorphism"
                   onClick={() => router.push("#")}
                 >
                   <div className="absolute bottom-5 right-6 text-2xl font-bold">
                     {genre.type}
                   </div>
                   <Image
-                    className="rounded-t-lg h-48"
+                    className="rounded-t-lg h-48 "
                     src={genre.img}
                     alt=""
                     width={250}

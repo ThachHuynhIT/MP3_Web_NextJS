@@ -13,13 +13,13 @@ export default function MainLayout({ children }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex w-full h-full bg-zinc-900">
-        <div className="lg:w-64 sm:w-0 bg-black sm:hidden lg:block">
+      <div className="flex w-full h-full ">
+        <div className="lg:w-64 sm:w-0 bg-black  sm:hidden lg:block">
           <Sidebar />
         </div>
         <div className="flex relative flex-wrap w-full h-full">
           <Header />
-          <div className="container-body h-full min-h-[90vh] w-full text-white">
+          <div className="container-body h-full min-h-[90vh] w-full text-white bg-moon bg-fixed">
             {children}
             <div className="flex h-48 w-full justify-center pb-10 pt-6">
               <hr className="border-t-blue-700 border-gray-900 h-1 bg-cyan-900 w-4/5" />
