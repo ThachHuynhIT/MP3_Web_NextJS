@@ -10,7 +10,7 @@ const Search = () => {
   return (
     <div>
       <MainLayout>
-        <SearchResult keyword={search?.toString() || ""} />
+        <SearchResult />
       </MainLayout>
     </div>
   );
