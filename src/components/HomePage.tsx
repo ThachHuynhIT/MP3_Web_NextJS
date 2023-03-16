@@ -26,7 +26,7 @@ const HomePage = () => {
       {types?.map((type, index1) => {
         return (
           <div key={index1}>
-            <ItemTitle name={type} url={type}></ItemTitle>
+            <ItemTitle name={type} url={"/album/" + type}></ItemTitle>
             <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
               {/* sing of type */}
               {albums?.map((dataE, index2) => {

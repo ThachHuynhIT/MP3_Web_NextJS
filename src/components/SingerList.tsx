@@ -10,11 +10,11 @@ interface props {
 const SingerList = ({ imgSrc, name, description }: props) => {
   return (
     <div className="text-white md:w-full h-80 pr-4  sm:scale-x-70 md:scale-100">
-      <div className="max-w-sm w-full h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-zinc-800 dark:border-gray-700 hover:bg-zinc-700 duration-200	">
+      <div className="max-w-sm w-full h-full border border-transparent rounded-lg shadow-neumorphism hover:brightness-125 duration-200	">
         <a href="#" className="">
           <div className="flex w-full justify-center my-4 object-cover">
             <Image
-              className="rounded-full object-cover h-[176px] hover:bg-slate-600"
+              className="rounded-full object-cover h-[176px] hover:bg-slate-600 shadow-circle"
               src={imgSrc}
               alt=""
               width={176}

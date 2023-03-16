@@ -106,7 +106,7 @@ const PlayingBar = () => {
   };
 
   return (
-    <div className="flex fixed text-[32px] text-white items-center md:justify-between bg-neutral-800 border-t-2 border-zinc-600	border-solid w-full bottom-0 h-20 p-2">
+    <div className="flex fixed text-[32px] text-white items-center md:justify-between bg-[#153027] border-t-2 border-green-900		border-solid w-full bottom-0 h-20 p-2">
       {/* song name and img */}
 
       <div className="text-lg w-auto md:w-[400px] flex items-center">

@@ -9,8 +9,8 @@ interface props {
 
 const AlbumList = ({ name, description, imgSrc }: props) => {
   return (
-    <div className="text-white  md:w-full h-80 pr-4  sm:scale-x-70 md:scale-100">
-      <div className="max-w-sm w-full h-full bg-white border border-gray-200 rounded-lg shadow-neumorphism dark:bg-[#32325D] dark:border-gray-700 hover:bg-zinc-700 duration-200	">
+    <div className="text-white md:w-full h-80 pr-4 sm:scale-x-70 md:scale-100">
+      <div className="max-w-sm w-full h-full border border-transparent rounded-lg shadow-neumorphism hover:brightness-90 duration-200	">
         <a href="#" className="">
           <div className="flex w-full justify-center my-4 object-cover">
             <Image

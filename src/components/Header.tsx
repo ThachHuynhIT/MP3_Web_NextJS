@@ -8,7 +8,7 @@ import SearchInput from "./SearchInput";
 const Header = () => {
   const router = useRouter();
   return (
-    <div className="header bg-zinc-800	sticky top-0 flex w-full h-12 md:pr-10 items-center text-white z-20">
+    <div className="header  backdrop-blur-3xl	sticky top-0 flex w-full h-12 md:pr-10 items-center text-white z-20">
       <div className="flex items-center w-full m-2">
         <div className="hidden lg:flex m-4 text-xl font-medium 	">
           <button onClick={() => router.back()}>

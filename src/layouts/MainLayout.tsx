@@ -14,12 +14,12 @@ export default function MainLayout({ children }: any) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex w-full h-full ">
-        <div className="lg:w-64 sm:w-0 bg-black  sm:hidden lg:block">
+        <div className="lg:w-64 sm:w-0 bg-[#142922] sm:hidden lg:block shadow-2xl">
           <Sidebar />
         </div>
-        <div className="flex relative flex-wrap w-full h-full">
+        <div className="flex relative bg-[#0D5247] flex-wrap w-full h-full">
           <Header />
-          <div className="container-body h-full min-h-[90vh] w-full text-white bg-moon bg-fixed">
+          <div className="container-body h-full min-h-[90vh] w-full text-white bg-wave bg-fixed">
             {children}
             <div className="flex h-48 w-full justify-center pb-10 pt-6">
               <hr className="border-t-blue-700 border-gray-900 h-1 bg-cyan-900 w-4/5" />

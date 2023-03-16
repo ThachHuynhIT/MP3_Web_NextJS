@@ -14,7 +14,7 @@ export const SongsList = ({ page }: props) => {
   const albumLength = songs.length;
 
   return (
-    <div className="relative overflow-x-auto shadow-md scrollbar-hidden sm:rounded-lg md:mx-4 bg-gradient-to-tr from-violet-700 to-black bggrad ">
+    <div className="relative overflow-x-auto scrollbar-hidden sm:rounded-lg md:mx-4 shadow-neumorphism mt-3">
       {/* album img */}
       <div className="flex m-8 ml-10 dark:text-white h-max items-center">
         <Image
