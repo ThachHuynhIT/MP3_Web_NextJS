@@ -6,7 +6,7 @@ const index = () => {
   return (
     <div>
       <MainLayout>
-        <SongsList page={1000}></SongsList>
+        <SongsList page={1000} albumName={""}></SongsList>
       </MainLayout>
     </div>
   );
