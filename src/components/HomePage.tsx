@@ -7,13 +7,22 @@ import ItemTitle from "./ItemTitle";
 import albums from "data/album";
 
 const HomePage = () => {
-  // useEffect(() => {
-  //   const fetchApi = async () => {
-  //     const response = await albumService.getAllAlbum(1);
-  //     console.log(response);
-  //   };
-  //   fetchApi();
-  // }, []);
+  const [album, setAlbum] = useState<
+    {
+      name: string;
+      type: string;
+      description: string;
+      slug: string;
+      img: string;
+    }[]
+  >([]);
+  useEffect(() => {
+    const fetchApi = async () => {
+      const response = await albumService.getAllAlbum();
+      setAlbum(response);
+    };
+    fetchApi();
+  }, []);
 
   let typeOfAlbum = albums?.map((album) => {
     return album.type;
@@ -27,12 +36,9 @@ const HomePage = () => {
         return (
           <div key={index1}>
             <ItemTitle name={type} url={"/album/" + type}></ItemTitle>
-            <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 grid-rows-1 w-full overflow-y-hidden h-80 md:overflow-x-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 w-full overflow-y-hidden h-80 md:overflow-x-hidden">
               {/* sing of type */}
-              {albums?.map((dataE, index2) => {
-                if (index2 <= 5 && dataE.type === type) {
-                  console.log(index2);
-                }
+              {album?.map((dataE, index2) => {
                 if (dataE.type === type) {
                   return (
                     <div key={index2}>
@@ -40,6 +46,7 @@ const HomePage = () => {
                         name={dataE.name}
                         description={dataE.description}
                         imgSrc={dataE.img}
+                        slug={dataE.slug}
                       ></AlbumList>
                     </div>
                   );

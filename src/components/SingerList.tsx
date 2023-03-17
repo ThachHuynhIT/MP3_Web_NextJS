@@ -16,7 +16,7 @@ const SingerList = ({ imgSrc, name, description }: props) => {
             <Image
               className="rounded-full object-cover h-[176px] hover:bg-slate-600 shadow-circle"
               src={imgSrc}
-              alt=""
+              alt="Singer"
               width={176}
               height={176}
             />

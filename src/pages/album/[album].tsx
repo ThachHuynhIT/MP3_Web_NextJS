@@ -1,15 +1,19 @@
 import React from "react";
-import { SongsList } from "@/components/SongsList";
 import MainLayout from "../../layouts/MainLayout";
+import { SongsList } from "@/components/SongsList";
+import { useRouter } from "next/router";
 
-const index = () => {
+const PageAlbum = () => {
+  const router = useRouter();
+  const { album } = router.query;
+
   return (
     <div>
       <MainLayout>
-        <SongsList page={1000}></SongsList>
+        <SongsList page={1000} albumName={album || ""}></SongsList>
       </MainLayout>
     </div>
   );
 };
 
-export default index;
+export default PageAlbum;

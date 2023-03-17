@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SongPopUp from "./OptionSongPopUp";
 import Image from "next/image";
 // fake data
@@ -7,10 +7,11 @@ import album from "data/album";
 // cmt
 
 interface props {
+  albumName: any;
   page: number;
 }
 
-export const SongsList = ({ page }: props) => {
+export const SongsList = ({ page, albumName }: props) => {
   const albumLength = songs.length;
 
   return (
@@ -27,7 +28,8 @@ export const SongsList = ({ page }: props) => {
         <div className="flex flex-col ml-2 w-full">
           <div className="mx-2 text-xl font-thin">{album[1].type}</div>
           <div className="m-4 text-8xl font-bold truncate w-4/5">
-            {album[1].name}
+            {/* {album[1].name} */}
+            {albumName}
           </div>
           <div className="mx-2 text-xl font-thin">
             {album[1].description || "Music album"}
@@ -57,31 +59,29 @@ export const SongsList = ({ page }: props) => {
           {songs.map((songs, index) => {
             if (index < page && index < albumLength)
               return (
-                <>
-                  <tr
-                    key={index}
-                    className="border-b dark:border-gray-700 hover:bg-indigo-800 hover:text-white"
+                <tr
+                  key={index}
+                  className="border-b dark:border-gray-700 hover:bg-indigo-800 hover:text-white"
+                >
+                  <td className="px-6 py-4">{index + 1}</td>
+                  <th
+                    scope="row"
+                    className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
-                    <td className="px-6 py-4">{index + 1}</td>
-                    <th
-                      scope="row"
-                      className="flex items-center px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-                    >
-                      <Image
-                        className="rounded-t-lg mr-2 w-[40px] h-[40px] object-cover"
-                        src={songs.links.images[1].url}
-                        alt=""
-                        width={50}
-                        height={50}
-                      ></Image>
-                      {songs.name}
-                    </th>
-                    <td className="px-6 py-4">{songs.author}</td>
-                    <td className="px-6 py-4 absolute ">
-                      <SongPopUp index={index} />
-                    </td>
-                  </tr>
-                </>
+                    <Image
+                      className="rounded-t-lg mr-2 w-[40px] h-[40px] object-cover"
+                      src={songs.links.images[1].url}
+                      alt=""
+                      width={50}
+                      height={50}
+                    ></Image>
+                    {songs.name}
+                  </th>
+                  <td className="px-6 py-4">{songs.author}</td>
+                  <td className="px-6 py-4 absolute ">
+                    <SongPopUp index={index} />
+                  </td>
+                </tr>
               );
           })}
         </tbody>

@@ -17,6 +17,9 @@ const nextConfig = {
       "charts-static.billboard.com",
       "i1.sndcdn.com",
       "cdnmedia.thethaovanhoa.vn",
+      "i.discogs.com",
+      "upload.wikimedia.org",
+      "photo-resize-zmp3.zmdcdn.me",
     ],
   },
 };
