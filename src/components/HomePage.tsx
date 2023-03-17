@@ -12,17 +12,20 @@ const HomePage = () => {
       name: string;
       type: string;
       description: string;
-
       img: string;
     }[]
   >([]);
+
+  const [le, setLe] = useState<number>(0);
+
   useEffect(() => {
     const fetchApi = async () => {
       const response = await albumService.getAllAlbum();
       setAlbum(response);
+      setLe(response?.length);
     };
     fetchApi();
-  }, []);
+  }, [le]);
 
   let typeOfAlbum = albums?.map((album) => {
     return album.type;
@@ -31,12 +34,12 @@ const HomePage = () => {
   let types = Array.from(loc);
 
   return (
-    <div className="h-max p-8 pb-1 w-full">
+    <div className="h-max p-2 md:p-8 pb-1 w-full">
       {types?.map((type, index1) => {
         return (
           <div key={index1}>
-            <ItemTitle name={type} url={"/album/" + type}></ItemTitle>
-            <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 w-full overflow-y-hidden h-80 md:overflow-x-hidden">
+            <ItemTitle name={type} url={"/genre/" + type}></ItemTitle>
+            <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 w-full overflow-y-hidden h-80 md:overflow-x-hidden">
               {/* sing of type */}
               {album?.map((dataE, index2) => {
                 if (dataE.type === type) {

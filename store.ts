@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import playingReducer from "slices/playingSlice";
 import searchReducer from "slices/searchSlice";
 // ...
 
 export const store = configureStore({
   reducer: {
     search: searchReducer,
+    playing: playingReducer,
     // posts: postsReducer,
     // comments: commentsReducer,
     // users: usersReducer,

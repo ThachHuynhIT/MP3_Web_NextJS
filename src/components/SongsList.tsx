@@ -1,17 +1,48 @@
 import React, { useEffect, useState } from "react";
 import SongPopUp from "./OptionSongPopUp";
 import Image from "next/image";
+import { useRouter } from "next/router";
+
+import { getAlbumSongs } from "@/services/albumService";
+
 // fake data
 import songs from "../../data/songs";
-import album from "data/album";
-// cmt
+import albums from "data/album";
 
 interface props {
   albumName: any;
   page: number;
 }
 
+interface linkImg {
+  images: Array<{ url: string }>;
+}
+
+interface songFromApi {
+  name: string;
+  author: string;
+  img: string;
+  link: linkImg;
+}
+
 export const SongsList = ({ page, albumName }: props) => {
+  const [songList, setSongList] = useState<
+    {
+      name: string;
+      author: string;
+      img: string;
+      link: linkImg;
+    }[]
+  >([]);
+
+  useEffect(() => {
+    const fetchApi = async () => {
+      const response = await getAlbumSongs(albumName, 0);
+      setSongList(response);
+    };
+    fetchApi();
+  }, [albumName]);
+
   const albumLength = songs.length;
 
   return (
@@ -20,22 +51,22 @@ export const SongsList = ({ page, albumName }: props) => {
       <div className="flex m-8 ml-10 dark:text-white h-max items-center">
         <Image
           className="rounded-t-lg  w-[250px] h-[250px] object-cover"
-          src={album[2].img}
+          src={albums[2].img}
           alt=""
           width={250}
           height={250}
         />
         <div className="flex flex-col ml-2 w-full">
-          <div className="mx-2 text-xl font-thin">{album[1].type}</div>
+          <div className="mx-2 text-xl font-thin">{albums[1].type}</div>
           <div className="m-4 text-8xl font-bold truncate w-4/5">
-            {/* {album[1].name} */}
+            {/* {albums[1].name} */}
             {albumName}
           </div>
           <div className="mx-2 text-xl font-thin">
-            {album[1].description || "Music album"}
+            {albums[1].description || "Music album"}
           </div>
           <div className="mx-2 text-xl font-thin">
-            {album[1].singer || "Unknown"}
+            {albums[1].singer || "Unknown"}
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const AlbumList = ({ name, description, imgSrc }: props) => {
   };
 
   return (
-    <div className="text-white md:w-full h-80 pr-4 sm:scale-x-70 md:scale-100">
+    <div className="text-white md:w-full my-1 h-80 pr-4 sm:scale-x-70 md:scale-100">
       <div className="max-w-sm w-full h-full border border-transparent rounded-lg shadow-neumorphism hover:brightness-90 duration-200	">
         <div className="" onClick={handleClick}>
           {/* image */}
