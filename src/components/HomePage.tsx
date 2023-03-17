@@ -12,7 +12,7 @@ const HomePage = () => {
       name: string;
       type: string;
       description: string;
-      slug: string;
+
       img: string;
     }[]
   >([]);
@@ -46,7 +46,6 @@ const HomePage = () => {
                         name={dataE.name}
                         description={dataE.description}
                         imgSrc={dataE.img}
-                        slug={dataE.slug}
                       ></AlbumList>
                     </div>
                   );
