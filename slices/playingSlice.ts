@@ -8,9 +8,9 @@ interface PlayingState {
     album: string;
     name: string;
     url: string;
-    singer: string;
+    author: string;
     views: number;
-    link: Array<{ images: Array<{ url: string }> }>;
+    links: { images: Array<{ url: string }> };
   }>;
 }
 
@@ -33,6 +33,6 @@ export const playingSlice = createSlice({
 export const { setPlayingSong } = playingSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type
-export const selectSearch = (state: RootState) => state.playing.song;
+export const selectPlaying = (state: RootState) => state.playing.song;
 
 export default playingSlice.reducer;

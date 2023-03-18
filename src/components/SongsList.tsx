@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import SongPopUp from "./OptionSongPopUp";
 import Image from "next/image";
-import { useRouter } from "next/router";
+
+import PlayButton from "@/components/PlayButton";
+import { IconBaseProps } from "react-icons";
+import { BsPlayFill } from "react-icons/bs";
 
 import { getAlbumSongs } from "@/services/albumService";
 
@@ -14,24 +17,14 @@ interface props {
   page: number;
 }
 
-interface linkImg {
-  images: Array<{ url: string }>;
-}
-
-interface songFromApi {
-  name: string;
-  author: string;
-  img: string;
-  link: linkImg;
-}
-
 export const SongsList = ({ page, albumName }: props) => {
   const [songList, setSongList] = useState<
     {
       name: string;
       author: string;
       img: string;
-      link: linkImg;
+      url: string;
+      links: { images: Array<{ url: string }> };
     }[]
   >([]);
 
@@ -48,6 +41,8 @@ export const SongsList = ({ page, albumName }: props) => {
   return (
     <div className="relative overflow-x-auto scrollbar-hidden sm:rounded-lg md:mx-4 shadow-neumorphism mt-3">
       {/* album img */}
+      <PlayButton icon={BsPlayFill} song={songList}></PlayButton>
+
       <div className="flex m-8 ml-10 dark:text-white h-max items-center">
         <Image
           className="rounded-t-lg  w-[250px] h-[250px] object-cover"
@@ -87,7 +82,7 @@ export const SongsList = ({ page, albumName }: props) => {
           </tr>
         </thead>
         <tbody>
-          {songs.map((songs, index) => {
+          {songList.map((songs, index) => {
             if (index < page && index < albumLength)
               return (
                 <tr

@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AlbumList from "./AlbumList";
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 import { useSelector } from "react-redux";
 import { selectSearch } from "slices/searchSlice";

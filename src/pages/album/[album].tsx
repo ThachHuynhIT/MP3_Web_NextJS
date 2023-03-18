@@ -3,8 +3,6 @@ import MainLayout from "../../layouts/MainLayout";
 import { SongsList } from "@/components/SongsList";
 import { useRouter } from "next/router";
 
-import * as albumService from "../../services/albumService";
-
 const PageAlbum = () => {
   const router = useRouter();
   const { album } = router.query;

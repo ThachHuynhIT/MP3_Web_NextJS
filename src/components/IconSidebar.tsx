@@ -1,4 +1,3 @@
-import { link } from "fs";
 import React from "react";
 import { IconType } from "react-icons";
 import { useRouter } from "next/router";
@@ -13,10 +12,6 @@ const IconSidebar = ({ icon: Icon, label, link }: props) => {
   const router = useRouter();
   // : React.ChangeEvent<HTMLInputElement>
   // : React.FormEvent<HTMLInputElement>
-  const handleClick = (e: any) => {
-    e.preventDefault();
-    router.push(link);
-  };
 
   return (
     <div>
