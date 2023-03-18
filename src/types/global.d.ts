@@ -7,7 +7,6 @@ declare global {
     img: string;
     legion: string;
     links: { images: Array<{ url: string }> };
-
     name: string;
     singer: string;
     type: string;
